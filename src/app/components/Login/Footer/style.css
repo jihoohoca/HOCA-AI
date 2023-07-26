@@ -1,0 +1,21 @@
+.text {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 45px;
+  margin-left: 40px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+.text a {
+  margin-left: 5px;
+  color: #60ae89;
+}
+
+span {
+  color: #787878;
+  width: 2px;
+  height: 28px;
+}
