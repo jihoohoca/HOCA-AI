@@ -19,5 +19,7 @@
     },
     "allowSyntheticDefaultImports": true
   },
-  "exclude": ["build", "node_modules"]
+  "exclude": ["build", "node_modules"],
+  "types": [ "node" ],
+"typeRoots": [ "../node_modules/@types" ]
 }
