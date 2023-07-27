@@ -6,20 +6,93 @@ h1 {
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%;
+  line-height: 40%;
   margin-top: 80px;
 }
 a {
   color: #60ae89;
 }
 
-input {
+.notification {
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: #262626;
+}
+
+.first_line {
+  margin-right: 15px;
+}
+.second_line {
+  margin: auto;
+}
+.third_line {
+  margin-right: 15px;
+}
+
+.address {
+  margin-top: 30px;
   width: 378px;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 3px;
   background: no-repeat;
 }
+
+.password {
+  margin-top: 20px;
+  width: 385x;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  background: no-repeat;
+  background-image: url('../../../images/eye.png');
+  background-position: right center;
+  background-origin: content-box;
+  padding-right: 19px;
+}
+
+.line_1 {
+  margin-top: 8px;
+  margin-right: 200px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: #262626;
+}
+
+.line_2 {
+  margin-top: 5px;
+  margin-right: 210px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 50%;
+  color:  #262626
+}
+
+.line_3{
+
+  margin-right: 220px;
+  margin-top: 8px;
+}
+
+.text_line_3 {
+  margin-left: 8px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: #60AE89;
+}
+
 .continute {
   display: flex;
   width: 419px;

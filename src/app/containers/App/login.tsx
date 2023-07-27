@@ -1,7 +1,7 @@
 
 import { Footer } from 'app/components/Login/Footer';
 import { Header } from 'app/components/Login/Header';
-import { Body } from 'app/components/Login/body';
+import { Body } from 'app/components/Login/Body';
 import { RouteComponentProps } from 'react-router';
 import React from 'react';
 

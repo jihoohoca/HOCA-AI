@@ -1,11 +1,12 @@
 import React from 'react'
+import styles from './style.css'
+import frame from '../../../images/Frame.png'
 
-const index = () => {
-  return (
-    <div>
-      <h1>Test</h1>
-    </div>
-  )
-}
 
-export default index
+export const Header = () => {
+    return (
+      <header className={styles.header}>
+        <img src={frame} />
+      </header>
+    );
+  };
