@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+
+
+.navigation_image_frame {
+    margin-top: 8px;
+    max-width: 73%;
+    position: static;
+  }
+
+.container_information{
+    display: flex;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: 5px;
+}
+p{
+    margin-left: 60px;
+}
+
+.information_line2{
+    margin-left: 45px;
+}
+
+.information_line3{
+    margin-left: 70px;
+}
+
+.information_line4{
+    margin-left: 50px;
+}
+
+.information_line5{
+    margin-left: 30px;
+}
+
+.information_line6{
+    margin-left: 40px;
+}
+.image_map{
+    margin-top: 120px;
+    margin-right: 10px;
+}
+
+.horizontal{
+    margin-top: 20px;
+    border-top: 2px solid #262626;
+    width: 1200px;
+    margin-left: 190px;
+}
+.text_final{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: 20px;
+    text-align: center;
+}
