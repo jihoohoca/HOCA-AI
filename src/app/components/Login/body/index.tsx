@@ -22,12 +22,11 @@ export const Body = () => {
           Don't have an account? &nbsp; <span className={style.link_signup}>Sign up</span>
         </div>
 
-      <div className= {style.horizontal_or}>
-        <div className={style.horizontal}></div>
-        <div className={style.or}>OR</div>
-        <div className={style.horizontal}></div>
-      </div>
-       
+        <div className={style.horizontal_or}>
+          <div className={style.horizontal}></div>
+          <div className={style.or}>OR</div>
+          <div className={style.horizontal}></div>
+        </div>
 
         <div className={style.button_google}>
           <div className={style.button_img}>
