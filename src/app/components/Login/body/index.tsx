@@ -8,21 +8,26 @@ export const Body = () => {
   return (
     <body>
       <form>
-        <h1>Welcome Back</h1>
-        <div className="address">
-          <input type="text" placeholder="Email address" required />
+        <div className={style.welcome}>Welcome Back</div>
+
+        <div>
+          <input type="text" className={style.input_address} placeholder="Email address"></input>
         </div>
 
         <div className={style.continute}>
           <div className={style.text}>Continue</div>
         </div>
 
-        <div className={style.sigup}>
-          Don't have an account? &nbsp; <a>Sigup</a>
+        <div className={style.signup}>
+          Don't have an account? &nbsp; <span className={style.link_signup}>Sign up</span>
         </div>
 
-        <div className={style.textOr}>OR</div>
-        <div className={style.blank}></div>
+      <div className= {style.horizontal_or}>
+        <div className={style.horizontal}></div>
+        <div className={style.or}>OR</div>
+        <div className={style.horizontal}></div>
+      </div>
+       
 
         <div className={style.button_google}>
           <div className={style.button_img}>

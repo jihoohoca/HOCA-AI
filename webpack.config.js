@@ -36,7 +36,7 @@ module.exports = {
     rules: [
       // .ts, .tsx
       {
-        test: /\.tsx?$/,
+        test: /\.(ts|tsx)?$/,
         use: [
           !isProduction && {
             loader: 'babel-loader',
@@ -86,6 +86,23 @@ module.exports = {
       {
         test: /\.(jpe?g|gif|bmp|mp3|mp4|ogg|wav|eot|ttf|woff|woff2)$/,
         use: 'file-loader'
+      },
+      {
+        test: /\.(scss)$/,
+        use: [
+          {
+            // inject CSS to page
+            loader: 'style-loader'
+          },
+          {
+            // translates CSS into CommonJS modules
+            loader: 'css-loader'
+          },
+          {
+            // compiles Sass to CSS
+            loader: 'sass-loader'
+          }
+        ]
       }
     ]
   },
