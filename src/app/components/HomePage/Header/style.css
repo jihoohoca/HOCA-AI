@@ -1,0 +1,86 @@
+body {
+  overflow-x: hidden;
+}
+.navigation {
+  width: 100vw;
+  display: flex;
+  margin-left: 250px;
+  overflow: hidden;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  color: #252525;
+}
+
+.navigation_image_frame {
+  margin-top: 8px;
+  max-width: 73%;
+}
+
+.navigation_general {
+  display: flex;
+  margin-left: 15px;
+  width: 100%;
+}
+
+.navigation_image {
+  height: 20px;
+  margin-top: 32px;
+}
+
+.navigation_text {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.navigation_search {
+  align-items: center;
+  border-radius: 10px;
+  border: #bdbdbd 1px solid;
+  margin-left: 30px;
+  margin-top: 18px;
+  background: no-repeat;
+  background-image: url('../../../images/search.svg');
+  background-position: right;
+  background-origin: content-box;
+  width: 228px;
+  padding: 10px;
+}
+
+.navigation_button {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #f2a71a;
+  border-radius: 9px;
+  box-sizing: border-box;
+  color: #f2a71a;
+  cursor: pointer;
+  display: inline-block;
+  background: no-repeat;
+  background-image: url('../../../images/arrow-right.svg');
+  background-position: 70px;
+  margin-left: 20px;
+  padding: 9px 45px 9px 12px;
+  width: 110px;
+}
+
+.navigation_signup{
+    appearance: none;
+  border: 1px solid #f2a71a;
+  border-radius: 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  background: no-repeat;
+  background-image: url('../../../images/arrow-right-2.svg');
+  background-position: 75px;
+  margin-left: 20px;
+  padding: 9px 34px 9px 12px;
+  width: 110px;
+  background-color: #f2a71a;
+}
