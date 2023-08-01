@@ -3,23 +3,46 @@ import style from './style.css';
 import google from '../../../images/google.png';
 import microsoft from '../../../images/microsoft.png';
 import apple from '../../../images/apple.png';
+import check from '../../../images/check right.png';
 
 export const Body = () => {
   return (
     <body>
       <form>
-        <div className={style.welcome}>Welcome Back</div>
+        <h1>Create your account</h1>
+
+        <div className={style.notification}>
+          <div className={style.first_line}>Note that phone verification may be required for</div>
+          <div className={style.second_line}>signup.Your number will only be used to verify</div>
+          <div className={style.third_line}>your identity for security purposes.</div>
+        </div>
 
         <div>
-          <input type="text" className={style.input_address} placeholder="Email address"></input>
+          <input className={style.address} type="text" placeholder="Email address" required />
+        </div>
+
+        <div>
+          <input className={style.password} type="password" placeholder="Password" required />
+        </div>
+
+        <div className={style.check_password}>
+          <div className={style.line_1}>Your password must contain:</div>
+
+          <div>
+            <li className={style.line_2}> At least 1 upper case</li>
+          </div>
+        </div>
+
+        <div className={style.line_3}>
+          <img src={check}></img> <span className={style.text_line_3}>At least 8 characters</span>
         </div>
 
         <div className={style.continute}>
           <div className={style.text}>Continue</div>
         </div>
 
-        <div className={style.signup}>
-          Don't have an account? &nbsp; <span className={style.link_signup}>Sign up</span>
+        <div className={style.sigup}>
+          Already have an account? &nbsp; <span>Log in</span>
         </div>
 
         <div className={style.horizontal_or}>
