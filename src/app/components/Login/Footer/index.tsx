@@ -4,9 +4,9 @@ export const Footer = () => {
   return (
     <footer>
       <div className={style.text}>
-        <a>Terms of use</a>
+        <span>Terms of use</span>
         &ensp; <span>|</span> &ensp;
-        <a>Privacy policy</a>
+        <span>Privacy policy</span>
       </div>
     </footer>
   );

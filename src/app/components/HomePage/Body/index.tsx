@@ -14,7 +14,7 @@ export const Body = () => {
         <div>in a conversational way. The dialogue format makes it</div>
         <div>possible for ChatGPT to answer followup questions, </div>
         <div>admit its mistakes, challenge incorrect premises, and</div>
-        <div>and reject inappropriate requests.</div>
+        <div>reject inappropriate requests.</div>
         <div>
           <button className={style.navigation_button}>Try chatGPT</button>
         </div>
