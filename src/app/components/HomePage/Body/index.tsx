@@ -12,9 +12,9 @@ export const Body = () => {
       <div className={style.text_intro}>
         <div>We’ve trained a model called ChatGPT which interacts</div>
         <div>in a conversational way. The dialogue format makes it</div>
-        <div>possible for ChatGPT to answer followup questions, </div>
+        <div>possible for ChatGPT to answer followup questions,</div>
         <div>admit its mistakes, challenge incorrect premises, and</div>
-        <div>reject inappropriate requests.</div>
+        <div className={style.last_line}>reject inappropriate requests.</div>
         <div>
           <button className={style.navigation_button}>Try chatGPT</button>
         </div>
@@ -24,7 +24,7 @@ export const Body = () => {
         <div className={style.learn_more}>
           <div className={style.vertical}></div>
           <div className={style.text_learn_more}>
-            <div>Pioneering research</div> <div>on the path to AGI</div>
+            <div>Pioneering research</div> <div>on the path to AGI &ensp; </div>
             <div className={style.button_learn_more}>Learn more</div>
           </div>
         </div>
@@ -32,7 +32,7 @@ export const Body = () => {
         <div className={style.learn_more}>
           <div className={style.vertical}></div>
           <div className={style.text_learn_more}>
-            <div>Transforming work</div> <div> and creativity with AI</div>
+            <div>Transforming work &ensp;&nbsp; </div> <div> and creativity with AI</div>
             <div className={style.button_explore}>Explore our products</div>
           </div>
         </div>
@@ -40,7 +40,7 @@ export const Body = () => {
         <div className={style.learn_more}>
           <div className={style.vertical}></div>
           <div className={style.text_learn_more}>
-            <div>Join us in shaping the </div> <div>future of technology</div>
+            <div>Join us in shaping the </div> <div>future of technology &ensp;</div>
             <div className={style.button_future}>View careers</div>
           </div>
         </div>
@@ -50,10 +50,10 @@ export const Body = () => {
           <h3>Safety & responsibility</h3>
 
           <div className={style.text_safe_responsibility}>
-            <div>Our work to create safe and beneficial AI</div>
-            <div>requires a deep understanding of the</div>
+            <div>Our work to create safe and beneficial AI &emsp; &ensp;</div>
+            <div>requires a deep understanding of the &emsp; &emsp; &emsp; </div>
             <div>potential risks and benefits, as well as careful</div>
-            <div> consideration of the impact.</div>
+            <div> consideration of the impact.&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </div>
           </div>
           <div className={style.button_safety}>Learn about safety</div>
         </div>
@@ -65,12 +65,12 @@ export const Body = () => {
         <h3 className={style.product_left}> Product</h3>
         <div className={style.product_right}>
           <div>Our API platform offers our latest models and</div>
-          <div>guides for safety best practices.</div>
+          <div>guides for safety best practices.&emsp; &emsp; &emsp; &emsp; &ensp; </div>
           <div className={style.button_explore}>Explore our products</div>
         </div>
       </div>
 
-      <div className={style.arrow}>
+      <div className={style.arrow_general}>
         <div className={style.arrow_left}></div>
         <div className={style.arrow_right}></div>
       </div>

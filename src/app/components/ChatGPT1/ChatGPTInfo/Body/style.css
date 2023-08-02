@@ -1,5 +1,4 @@
 body {
-    color: #bdbdbd;
     font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
@@ -16,14 +15,17 @@ body {
     margin-top: 20px;
     text-align: left;
     margin-left: 12px;
+    color: #bdbdbd;
   }
 
 .message {
     margin-left: 8px;
+    color: #fff;
 }
 
 .month {
     margin-top: 38px;
     text-align: left;
     margin-left: 12px;
+    color: #bdbdbd;
 }

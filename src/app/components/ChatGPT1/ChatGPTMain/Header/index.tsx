@@ -1,9 +1,9 @@
 import React from 'react';
+import style from './style.css'
 export const Header = () => {
   return (
     <div>
-            <h1>Chat GPT</h1>
-           <img src='../../../../images/Frame.png'></img>
+          <div className={style.chatgpt}>ChatGPT</div>
     </div>
   );
 };
