@@ -7,7 +7,7 @@ import check from '../../../images/check right.png';
 
 export const Body = () => {
   return (
-    <body>
+    <div className={style.body_signup}>
       <form>
         <h1>Create your account</h1>
 
@@ -71,6 +71,6 @@ export const Body = () => {
           <div className={style.button_text}>Continue With Apple</div>
         </div>
       </form>
-    </body>
+    </div>
   );
 };
