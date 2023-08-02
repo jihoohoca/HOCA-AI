@@ -1,7 +1,7 @@
 
 import { RouteComponentProps } from 'react-router';
 import React from 'react';
-import {ChatGPTInfo} from 'app/components/ChatGPT1/ChatGPTInfo'
+import {ChatGPTInfo} from 'app/components/ChatGPT1/ChatGPTInfor'
 import { ChatGPTMain } from 'app/components/ChatGPT1/ChatGPTMain';
 import style from './style.css'
 

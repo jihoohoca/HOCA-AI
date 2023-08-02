@@ -1,0 +1,34 @@
+.infor_input_user{
+  width: 100%;
+  height: 25vh;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_user {
+  width: 60%;
+  height: 15vh;
+  margin-top: 70px;
+  margin-left: 10px;
+  margin-right: 200px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: #262626;
+}
+.avatar{
+  margin-top: 70px;
+  margin-left:170px;
+} 
+
+.chatgpt_answer_user {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+
