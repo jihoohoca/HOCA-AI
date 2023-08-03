@@ -1,0 +1,176 @@
+.container {
+  display: flex;
+  color: #000;
+  justify-content: center;
+  font-feature-settings: 'liga' off;
+  /* Header 2 */
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.text_file{
+  margin-right:55px;
+  width: 82px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.text_qa{
+  margin-left: 60px;
+  text-align: center;
+}
+
+.text_text{
+  text-align: center;
+}
+
+.upload_file {
+  color: #000;
+text-align: center;
+font-feature-settings: 'liga' off;
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%;
+margin-top: 40px;
+}
+
+.upload_area{
+  width: 500px;
+  height: 289px;
+  background-color: #f4f4f4;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #f4f4f4;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.text_file_upload{
+  color: #000;
+text-align: center;
+/* Light body text */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%;
+width: 300px;
+margin-left: 80px;
+margin-top: 5px;
+}
+
+
+.upload_btn_wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.btn {
+  border: 0px solid gray;
+  color: gray;
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  background: no-repeat;
+  background-image: url('../../../../images/upload.svg');
+  background-position: right;
+  background-origin: content-box;
+}
+
+.upload_btn_wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.note{
+ margin-top: 40px;
+/* Light body text */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%;
+color: #000;
+width: 38%; 
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+.text_include_source{
+  margin-top: 40px;
+  margin-left: 360px;
+  text-align: start;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: #262626;
+}
+
+.input_data{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f4f4f4;
+    margin-top: 50px;
+    width: 690px;
+    height: 400px;
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+
+.button_qa {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  appearance: none;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  margin-top: 120px;
+  padding-top: 12px;
+  width: 190px;
+  text-align: center;
+  padding-bottom: 12px;
+  padding-right: 15px;
+  background-color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 180px;
+
+}
+
+.horizontal {
+  border-top: 1px solid #60AE89;
+  background-color: #60AE89;
+  width: 85px;
+}
