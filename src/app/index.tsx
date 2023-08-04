@@ -7,6 +7,7 @@ import { SignUp as AppSignUp } from './containers/App/signup/signup';
 import { HomePage as HomePageApp} from './containers/App/homepage/homepage';
 import { ChatGPT2 as ChatGPT2App} from './containers/App/chatgpt2';
 import { ChatBase as ChatBaseApp} from './containers/App/chatbase';
+import { ChatBase4 as ChatBaseApp4 } from './containers/App/chatbase4';
 import { hot } from 'react-hot-loader';
 
 export const App = hot(module)(() => (
@@ -16,6 +17,7 @@ export const App = hot(module)(() => (
     <Route path="/chatgpt2"  component={ChatGPT2App} />
     <Route path="/signup" component={AppSignUp} />
     <Route path="/chatbase" component={ChatBaseApp}></Route>
+    <Route path="/chatbase4" component={ChatBaseApp4} />
     <Route path="/home" component={HomePageApp} />
     <Route path="/" component={TodoApp} />
   </Switch>

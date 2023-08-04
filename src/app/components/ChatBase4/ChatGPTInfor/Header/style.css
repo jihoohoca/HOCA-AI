@@ -1,0 +1,133 @@
+.body {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.chatgpt_button {
+  display: flex;
+}
+
+.new_chat {
+  margin-top: 30px;
+  margin-left: 10px;
+  display: block;
+  width: 70%;
+  border: none;
+  background-color: #04aa6d;
+  padding: 15px 40px;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 7px;
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.chatgpt_menu {
+  display: block;
+  border: none;
+  padding: 10px 24px;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 7px;
+  background: no-repeat;
+  background-image: url('../../../../images/menu.png');
+  background-position: center;
+  background-origin: content-box;
+  background-color: #fff;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+
+
+.upload_file {
+  color: #000;
+text-align: center;
+font-feature-settings: 'liga' off;
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%;
+margin-top: 40px;
+}
+
+.upload_area{
+  width: 500px;
+  height: 289px;
+  background-color: #f4f4f4;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #f4f4f4;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.text_file_upload{
+  color: #000;
+text-align: center;
+/* Light body text */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%;
+width: 300px;
+margin-left: 80px;
+margin-top: 5px;
+}
+
+
+.upload_btn_wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.btn {
+  border: 0px solid gray;
+  color: gray;
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  background: no-repeat;
+  background-image: url('../../../../images/upload.svg');
+  background-position: right;
+  background-origin: content-box;
+}
+
+.upload_btn_wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.note{
+ margin-top: 40px;
+/* Light body text */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%;
+color: #000;
+width: 38%; 
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+

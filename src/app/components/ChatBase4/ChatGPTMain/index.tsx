@@ -1,21 +1,19 @@
 
 import { RouteComponentProps } from 'react-router';
 import React from 'react';
-import { Header } from 'app/components/ChatBase/DataSource/Header'
+import { Header } from 'app/components/ChatBase4/ChatGPTMain/Header';
 import style from './style.css'
-import { Body } from './Body';
-import { Footer } from './Footer';
+import { Body } from '../ChatGPTMain/Body';
 
 
-export namespace DataSource{
+export namespace ChatGPTMain{
   export interface Props extends RouteComponentProps<void> {}
 }
-export const DataSource = () => {  
+export const ChatGPTMain = () => {  
     return (
       <div className={style.chatgptmain}>
         <Header></Header>
         <Body></Body>
-        <Footer></Footer>
       </div>
     );
   };
