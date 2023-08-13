@@ -1,16 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './style.css';
 import google from '../../../images/google.png';
 import microsoft from '../../../images/microsoft.png';
 import apple from '../../../images/apple.png';
 import check from '../../../images/check right.png';
+// import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+
+const url = 'http://localhost:3000/v1/auth/register';
 
 export const Body = () => {
+  const navigate = useNavigate();
+  const initValues = { email: '', password: '' };
+  const [formValues, setFormValues] = useState(initValues);
+  const [formErrors, setFormErrors] = useState({ email: '', password: '' });
+  const [show, setShow] = useState(false);
+  const [data, setData] = useState('');
+  const [checkEmail, setCheckEmail] = useState('');
+  const [checkPassword, setCheckPassword] = useState(false);
+  const [validateEmail, setValidateEmail] = useState(false);
+
+  const handleShow = () => {
+    setShow(!show);
+  };
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const handleSubmit = (e: any) => {
+
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+
+    if (checkPassword == false && validateEmail == true) {
+      axios
+        .post(url, {
+          email: formValues.email,
+          password: formValues.password
+        })
+        .then((response: any) => {
+          setData(response.data.user);
+          if(response) {
+            navigate('/chatgpt1');
+          }
+        })
+        .catch((error) => {
+          setCheckEmail(error.response.data.message);
+        });
+
+      setCheckPassword(false);
+      setValidateEmail(false);
+      
+   
+
+    }
+  };
+
+  const validate = (values: any) => {
+    const errors = { email: '', password: '' };
+    let regex = new RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
+    let regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+
+    if (regex.test(values.email)) {
+      setValidateEmail(true);
+      setCheckPassword(false)
+    } else {
+      errors.email = 'Wrong format email';
+    }
+    if (!regexPassword.test(values.password)) {
+      setCheckPassword(true);
+    }
+    return errors;
+  };
+
   return (
     <div className={style.body_signup}>
       <form>
         <h1>Create your account</h1>
-
         <div className={style.notification}>
           <div className={style.first_line}>Note that phone verification may be required for</div>
           <div className={style.second_line}>signup.Your number will only be used to verify</div>
@@ -18,31 +87,58 @@ export const Body = () => {
         </div>
 
         <div>
-          <input className={style.address} type="text" placeholder="Email address" required />
+          <input
+            className={style.address}
+            type="text"
+            name="email"
+            placeholder="Email address"
+            value={formValues.email}
+            onChange={handleChange}
+          />
         </div>
-
+        <p className={style.validation_email}>{formErrors.email}</p>
+        {checkEmail && <p className={style.validation_email}>{checkEmail}</p>}
+      
         <div>
-          <input className={style.password} type="password" placeholder="Password" required />
+          <input
+            onClick={handleShow}
+            className={style.password}
+            type={show ? 'text' : 'password'}
+            name="password"
+            placeholder="Password"
+            value={formValues.password}
+            onChange={handleChange}
+          />
         </div>
+        <p className={style.validation_email}>{formErrors.password}</p>
 
-        <div className={style.check_password}>
-          <div className={style.line_1}>Your password must contain:</div>
-
+        {checkPassword && (
           <div>
-            <li className={style.line_2}> At least 1 upper case</li>
+            <div className={style.check_password}>
+              <div className={style.line_1}>Your password must contain:</div>
+
+              <div>
+                <li className={style.line_2}> At least 1 upper case</li>
+              </div>
+            </div>
+            <div className={style.line_3}>
+              <img src={check}></img> <span className={style.text_line_3}>At least 8 characters</span>
+            </div>
           </div>
-        </div>
-
-        <div className={style.line_3}>
-          <img src={check}></img> <span className={style.text_line_3}>At least 8 characters</span>
-        </div>
-
-        <div className={style.continute}>
-          <div className={style.text}>Continue</div>
+        )}
+        <div onClick={handleSubmit} className={style.continute}>
+          
+          <div className={style.text}>
+            <div>Continue</div>
+          </div>
+    
         </div>
 
         <div className={style.sigup}>
-          Already have an account? &nbsp; <span>Log in</span>
+          Already have an account? &nbsp;{' '}
+          <Link to="/login" className={style.link_login}>
+            <span>Log in</span>
+          </Link>
         </div>
 
         <div className={style.horizontal_or}>

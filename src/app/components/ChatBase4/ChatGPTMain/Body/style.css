@@ -368,3 +368,84 @@ margin-top: 5px;
 .container_button_file > button {
   margin-left: 25px;
 }
+
+.container_setting {
+  margin-top: 40px;
+  margin-left: 10%;
+  color: #000;
+/* Light body text */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%
+}
+
+.chatbot_id{
+  display: flex;
+  font-weight: 700;
+}
+.chatbot_id > div>img {
+  margin-left: 30px;
+}
+
+.number_of_character{
+  margin-top: 30px;
+}
+
+.number_of_character_text{
+  font-weight: 700;
+}
+
+.input_name_user{
+  margin-top: 40px;
+}
+
+
+.input_user {
+  margin-top: 6px;
+  width: 85%;
+  margin-right: 15px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  background-origin: content-box;
+  background-color: #fff;
+  color: #000;
+}
+
+.input_base_prompt{
+  margin-top: 40px;
+}
+
+.input_prompt{
+  margin-top: 6px;
+  width: 85%;
+  margin-right: 15px;
+  padding: 8px;
+  height: 154px;
+  box-sizing: border-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  background-origin: content-box;
+  background-color: #fff;
+  color: #000;
+}
+
+.input_model{
+  margin-top: 40px;
+}
+
+.input_model_text{
+  margin-top: 8px;
+  color: #bdbdbd;
+}
+
+.input_temperature{
+  margin-top: 30px;
+}
+
+.input_visibility{
+  margin-top: 30px;
+}
