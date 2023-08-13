@@ -1,12 +1,12 @@
 import React from 'react';
-import style from './style.css';
-import { RouteComponentProps } from 'react-router';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTodoActions } from 'app/actions';
 import { RootState } from 'app/reducers';
 import { TodoModel } from 'app/models';
 import { Header, TodoList, Footer } from 'app/components';
 
+import style from './style.css';
 import 'bootstrap/scss/bootstrap.scss';
 
 const FILTER_VALUES = (Object.keys(TodoModel.Filter) as (keyof typeof TodoModel.Filter)[]).map(
@@ -20,10 +20,12 @@ const FILTER_FUNCTIONS: Record<TodoModel.Filter, (todo: TodoModel) => boolean> =
 };
 
 export namespace App {
-  export interface Props extends RouteComponentProps<void> {}
+  export interface Props {}
 }
 
-export const App = ({ history, location }: App.Props) => {
+export const App = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const todoActions = useTodoActions(dispatch);
   const { todos, filter } = useSelector((state: RootState) => {
@@ -40,7 +42,7 @@ export const App = ({ history, location }: App.Props) => {
 
   const handleFilterChange = React.useCallback(
     (filter: TodoModel.Filter): void => {
-      history.push(`#${filter}`);
+      navigate(`#${filter}`);
     },
     [history]
   );

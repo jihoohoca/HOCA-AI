@@ -3,6 +3,7 @@ import style from './style.css';
 import refresh from '../../../../images/refresh-ccw.svg';
 import ArrowDown from '../../../../images/arrow down.svg';
 import Trash from '../../../../images/trash.svg';
+import Data from '../../../../images/data.svg'
 export const Body = () => {
   const [changeSource, setChangeSource] = useState({
     isChatBot: true,
@@ -123,6 +124,67 @@ export const Body = () => {
           </div>
         </div>
       )}
+
+    {
+      changeSource.isSettings && (
+        <div className={style.container_setting}> 
+          <div>Chatbot ID</div>
+          <div className={style.chatbot_id}>
+            <div>A6stY0a9nsA8smhsmaqnt</div>
+            <div><img src={Data}></img></div>
+          </div>
+          <div className={style.number_of_character}> 
+          <div className={style.number_of_character_text}>Number of characters</div>
+            <div>2,023</div>
+          </div>
+
+          <div className={style.input_name_user}> 
+          <div>Name</div>
+          <div>
+              <div contentEditable="true" className={style.input_user}>Senior Graphic/UI Designer</div>
+            </div>
+          </div>
+
+          <div className={style.input_base_prompt}> 
+          <div>Base Prompt (system message)</div>
+          <div>
+              <div contentEditable="true" className={style.input_prompt}>
+              I want you to act as a document that I am having a conversation with. Your name is "AI Assistant". You will provide me with answers from the given info. If the answer is not included, say exactly "Hmm, I am not sure." and stop after that. Refuse to answer any question not about the info. Never break character.
+              </div>
+            </div>
+          </div>
+
+          <div className={style.input_model}> 
+            <div>Model</div>
+            <div>
+              <div contentEditable="true" className={style.input_user}>gpt - 3.5 turbo</div>
+            </div>
+            <div className={style.input_model_text}>1 message using gpt-3.5-turbo costs 1 message credit. 1 message using gpt-4 costs 20 message credits. </div>
+          </div>
+
+          <div className={style.input_temperature}> 
+            <div>Temperature</div>
+            <div contentEditable="true" className={style.input_user}>Enter Temperature</div>
+          </div>
+
+          <div className={style.input_visibility}> 
+            <div>Visibility</div>
+            <div contentEditable="true" className={style.input_user}>Private</div>
+          </div>
+
+          <div className={style.input_model_text}>
+          'private': No one can access your chatbot except you (your account) 'can be embedded on website': Other people can chat with your chatbot if you send them the link. You can also embed it on 
+          your website so your website visitors are able to use it.
+          </div>
+
+
+
+        
+        </div>
+      )
+    }
+
+
 
       {changeSource.isDashboard && (
         <div>

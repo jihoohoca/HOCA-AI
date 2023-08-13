@@ -15,9 +15,10 @@ var { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   context: sourcePath,
   entry: {
-    app: './main.tsx'
+    app: './main.tsx',
   },
   output: {
+    publicPath: '/',
     path: outPath,
     filename: isProduction ? '[contenthash].js' : '[hash].js',
     chunkFilename: isProduction ? '[name].[contenthash].js' : '[name].[hash].js'
@@ -34,6 +35,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        include: /node_modules\/react-dom/,
+        use: ['react-hot-loader/webpack'],
+      },
       // .ts, .tsx
       {
         test: /\.(ts|tsx)?$/,
@@ -77,7 +83,7 @@ module.exports = {
                 })
               ]
             }
-          }
+          }, 
         ]
       },
       // static assets
@@ -125,6 +131,7 @@ module.exports = {
     runtimeChunk: true
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
       DEBUG: false
