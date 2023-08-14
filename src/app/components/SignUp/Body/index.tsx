@@ -53,9 +53,6 @@ export const Body = () => {
 
       setCheckPassword(false);
       setValidateEmail(false);
-      
-   
-
     }
   };
 
@@ -98,7 +95,7 @@ export const Body = () => {
         </div>
         <p className={style.validation_email}>{formErrors.email}</p>
         {checkEmail && <p className={style.validation_email}>{checkEmail}</p>}
-      
+        {data}
         <div>
           <input
             onClick={handleShow}
@@ -127,11 +124,11 @@ export const Body = () => {
           </div>
         )}
         <div onClick={handleSubmit} className={style.continute}>
-          
+
           <div className={style.text}>
             <div>Continue</div>
           </div>
-    
+
         </div>
 
         <div className={style.sigup}>

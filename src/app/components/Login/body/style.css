@@ -63,7 +63,9 @@
   color: #262626;
   text-align: center;
 }
-
+.link_signup {
+  text-decoration: none;
+}
 span{
   color: #60ae89;
 }
@@ -126,4 +128,19 @@ span{
   border-radius: 5px;
   border: #bdbdbd 1px solid;
   margin-top: 15px;
+}
+
+
+.validation_email {
+  margin-top: 8px;
+  color: #60AE89;
+  text-align: center;
+  margin-right: 320px;
+}
+
+.validation_check_email{
+  margin-top: 8px;
+  color: #60AE89;
+  text-align: center;
+  margin-right: 275px;
 }
