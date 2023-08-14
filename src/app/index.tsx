@@ -10,7 +10,7 @@ import { HomePage as HomePageApp } from './containers/App/homepage/homepage';
 import { ChatGPT2 as ChatGPT2App } from './containers/App/chatgpt2';
 import { ChatBase as ChatBaseApp } from './containers/App/chatbase';
 import { ChatBase4 as ChatBaseApp4 } from './containers/App/chatbase4';
-import { hot } from 'react-hot-loader';
+
 
 // prepare store
 const store = configureStore();
@@ -32,4 +32,4 @@ const App: FC<Props> = () => (
   </Provider>
 );
 
-export default hot(module)(App);
+export default App;
