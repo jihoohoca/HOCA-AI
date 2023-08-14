@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import { configureStore } from 'app/store';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import { Login as AppLogin } from 'app/containers/App/login/login';
-import { App as TodoApp } from 'app/containers/App';
 import { ChatGPT1 as ChatGPT1App } from 'app/containers/App/chatgpt1';
 import { SignUp as AppSignUp } from './containers/App/signup/signup';
 import { HomePage as HomePageApp } from './containers/App/homepage/homepage';
@@ -25,8 +24,7 @@ const App: FC<Props> = () => (
         <Route path="/signup" element={<AppSignUp />} />
         <Route path="/chatbase" element={<ChatBaseApp />}></Route>
         <Route path="/chatbase4" element={<ChatBaseApp4 />} />
-        <Route path="/home" element={<HomePageApp />} />
-        <Route path="/" element={<TodoApp />} />
+        <Route path="/" element={<HomePageApp />} />
       </Routes>
     </Router>
   </Provider>

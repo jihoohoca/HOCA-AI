@@ -13,7 +13,7 @@ export const Body = () => {
   const initValues = { email: '', password: '' };
   const [formValues, setFormValues] = useState(initValues);
   const [formErrors, setFormErrors] = useState({ email: '', password: '' });
-  const [data, setData] = useState('');
+  const [_data, setData] = useState('');
   const [checkEmail, setCheckEmail] = useState('');
   const [validateEmail, setValidateEmail] = useState(false);
   const [checkPassword, setCheckPassword] = useState(false);
