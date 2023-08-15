@@ -6,7 +6,8 @@ import { Body } from 'app/components/ChatGPT1/ChatGPTInfor/Body';
 import { Footer } from 'app/components/ChatGPT1/ChatGPTInfor/Footer';
 
 
-export const ChatGPTInfo = () => {  
+export const ChatGPTInfo = () => {
+    
     return (
       <div className={style.chatgptinfor}>
         <Header></Header>

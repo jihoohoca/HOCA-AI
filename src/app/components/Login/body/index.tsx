@@ -1,50 +1,49 @@
 import React, { useState } from 'react';
-import style from './style.css';
+import { Link } from 'react-router-dom';
+import apple from '../../../images/apple.png';
 import google from '../../../images/google.png';
 import microsoft from '../../../images/microsoft.png';
-import apple from '../../../images/apple.png';
-import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from './hooks';
+import style from './style.css';
 
-const url = 'http://localhost:3000/v1/auth/login'
 
 export const Body = () => {
-  const navigate = useNavigate();
+  const { login } = useAuth();
   const initValues = { email: '', password: '' };
   const [formValues, setFormValues] = useState(initValues);
   const [formErrors, setFormErrors] = useState({ email: '', password: '' });
-  const [_data, setData] = useState('');
-  const [checkEmail, setCheckEmail] = useState('');
+  const [_data, _setData] = useState('');
+  const [checkEmail, _setCheckEmail] = useState('');
   const [validateEmail, setValidateEmail] = useState(false);
   const [checkPassword, setCheckPassword] = useState(false);
- 
+
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const handleSubmit = (e: any) => {
-
+  const handleSubmit =  (e: any) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
 
     if (validateEmail == true && checkPassword == false) {
-      axios
-        .post(url, {
-          email: formValues.email,
-          password: formValues.password
-        })
-        .then((response: any) => {
-          setData(response.data.user);
-          navigate('/chatgpt1');
-        })
-        .catch((error) => {
-          setCheckEmail(error.response.data.message);
-        });
-        setCheckPassword(true)
-        setValidateEmail(false)
-    }
+      login({email: formValues.email, password: formValues.password});
 
+      // axios
+      //   .post(url, {
+      //     email: formValues.email,
+      //     password: formValues.password
+      //   })
+      //   .then((response: any) => {
+      //     setData(response.data.user);
+      //     navigate('/chatgpt1');
+      //   })
+      //   .catch((error) => {
+      //     setCheckEmail(error.response.data.message);
+      //   });
+      // setCheckPassword(true);
+      // setValidateEmail(false);
+    }
   };
 
   const validate = (values: any) => {
@@ -56,13 +55,13 @@ export const Body = () => {
       errors.email = 'Wrong format email';
     }
 
-    if(!formValues.password) {
-      setCheckPassword(true)
-      errors.password = "password is required"
+    if (!formValues.password) {
+      setCheckPassword(true);
+      errors.password = 'password is required';
     } else {
-      setCheckPassword(false)
+      setCheckPassword(false);
     }
-   
+
     return errors;
   };
 
@@ -72,16 +71,17 @@ export const Body = () => {
         <div className={style.welcome}>Welcome Back</div>
 
         <div>
-          <input type="text" className={style.input_address}
-           placeholder="Email address" 
-           value={formValues.email}
-           name="email"
-           onChange={handleChange}
-           >
-          </input>
+          <input
+            type="text"
+            className={style.input_address}
+            placeholder="Email address"
+            value={formValues.email}
+            name="email"
+            onChange={handleChange}
+          ></input>
         </div>
         <p className={style.validation_email}>{formErrors.email}</p>
-      
+
         <div>
           <input
             className={style.input_address}
@@ -95,11 +95,16 @@ export const Body = () => {
         {checkEmail && <p className={style.validation_check_email}>{checkEmail}</p>}
         <p className={style.validation_email}>{formErrors.password}</p>
         <div className={style.continute}>
-          <div onClick={handleSubmit} className={style.text}>Login</div>
+          <div onClick={handleSubmit} className={style.text}>
+            Login
+          </div>
         </div>
-       
+
         <div className={style.signup}>
-          Don't have an account? &nbsp; <Link to='/signup' className={style.link_signup}>Sign up</Link>
+          Don't have an account? &nbsp;{' '}
+          <Link to="/signup" className={style.link_signup}>
+            Sign up
+          </Link>
         </div>
 
         <div className={style.horizontal_or}>
