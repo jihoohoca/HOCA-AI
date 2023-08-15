@@ -3,6 +3,7 @@ import Frame from '../../../images/Frame.png'
 import Arrow from '../../../images/arrow down.svg'
 import Frame2 from '../../../images/Frame-2.svg'
 import style from './style.css'
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -23,8 +24,8 @@ export const Header = () => {
         <img className={style.navigation_image} src={Arrow}/>
         <div>
         <input className={style.navigation_search} type="text" placeholder="Seach" required />
-        <button className={style.navigation_button }>Log in</button>
-        <button className={style.navigation_signup }>Sign up</button>
+        <Link to='/login' className={style.navigation_button }>Log in</Link>
+        <Link to='signup' className={style.navigation_signup }>Sign up</Link>
         </div>
         </div>
         

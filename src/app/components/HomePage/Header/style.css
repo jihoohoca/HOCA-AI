@@ -64,12 +64,13 @@ body {
   background-image: url('../../../images/arrow-right.svg');
   background-position: 70px;
   margin-left: 20px;
-  padding: 9px 45px 9px 12px;
+  padding: 6px 45px 9px 12px;
   width: 110px;
+  text-decoration: none;
 }
 
 .navigation_signup{
-    appearance: none;
+  appearance: none;
   border: 1px solid #f2a71a;
   border-radius: 9px;
   box-sizing: border-box;
@@ -80,7 +81,8 @@ body {
   background-image: url('../../../images/arrow-right-2.svg');
   background-position: 75px;
   margin-left: 20px;
-  padding: 9px 34px 9px 12px;
+  padding: 6px 34px 9px 12px;
   width: 110px;
   background-color: #f2a71a;
+  text-decoration: none;
 }
