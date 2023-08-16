@@ -8,7 +8,7 @@ export interface RootState {
 
 export namespace RootState {
   export type TodoState = TodoModel[];
-  export type AuthState = {};
+  export type AuthState =  {};
 }
 
 
