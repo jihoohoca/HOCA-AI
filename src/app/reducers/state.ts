@@ -19,7 +19,6 @@ export namespace RootState {
     password: string;
   };
   
-
 }
 
 

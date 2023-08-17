@@ -14,6 +14,7 @@ export const authReducer = handleActions<RootState.AuthState, AuthLogin>(
       if (action.payload) {
         state.email = action.payload.email || '';
         state.password = action.payload.password || '';
+
       }
       return state;
     }

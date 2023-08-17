@@ -14,8 +14,8 @@ const useAuth = () => {
     let result = await authLogin(user);
 
     if (result) {
-      navigate('/chatgpt1');
-      authActions.authLogin({email: user.email, password: user.password});
+      navigate('/field');
+      authActions.authLogin({email: user.email, password: user.password, name: result.data.user.name});
       localStorage.setItem('accessToken', JSON.stringify(result.data.tokens.access));
       localStorage.setItem('refreshToken', JSON.stringify(result.data.tokens.refresh));
     }
