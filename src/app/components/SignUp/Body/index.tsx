@@ -4,20 +4,15 @@ import google from '../../../images/google.png';
 import microsoft from '../../../images/microsoft.png';
 import apple from '../../../images/apple.png';
 import check from '../../../images/check right.png';
-// import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
-
-const url = 'http://localhost:3000/v1/auth/register';
+import { Link} from 'react-router-dom';
+import {useSignup} from './hooks'
 
 export const Body = () => {
-  const navigate = useNavigate();
+  const { signup } = useSignup();
   const initValues = { email: '', password: '' };
   const [formValues, setFormValues] = useState(initValues);
   const [formErrors, setFormErrors] = useState({ email: '', password: '' });
   const [show, setShow] = useState(false);
-  const [data, setData] = useState('');
-  const [checkEmail, setCheckEmail] = useState('');
   const [checkPassword, setCheckPassword] = useState(false);
   const [validateEmail, setValidateEmail] = useState(false);
 
@@ -36,20 +31,8 @@ export const Body = () => {
     setFormErrors(validate(formValues));
 
     if (checkPassword == false && validateEmail == true) {
-      axios
-        .post(url, {
-          email: formValues.email,
-          password: formValues.password
-        })
-        .then((response: any) => {
-          setData(response.data.user);
-          if(response) {
-            navigate('/chatgpt1');
-          }
-        })
-        .catch((error) => {
-          setCheckEmail(error.response.data.message);
-        });
+     
+      signup({email: formValues.email, password: formValues.password});
 
       setCheckPassword(false);
       setValidateEmail(false);
@@ -94,8 +77,6 @@ export const Body = () => {
           />
         </div>
         <p className={style.validation_email}>{formErrors.email}</p>
-        {checkEmail && <p className={style.validation_email}>{checkEmail}</p>}
-        {data}
         <div>
           <input
             onClick={handleShow}
