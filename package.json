@@ -2,7 +2,7 @@
   "name": "HOCAAI",
   "version": "1.1.1",
   "private": true,
-  "description": "HOCA AI REACT",
+  "description": "HOCA AI REACT ",
   "keywords": [
     "react",
     "hooks",
@@ -16,8 +16,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --hot --progress --color --port 3001 --open",
-    "build": "webpack -p --progress --colors"
+    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode development --hot --progress --color --port 3001 --open",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack -p --progress --colors"
   },
   "license": "MIT",
   "devDependencies": {
