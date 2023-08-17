@@ -3,8 +3,14 @@ import { CardField } from './components/card';
 import style from './style.css';
 import Frame from '../../../images/Frame.png';
 import { Button } from 'app/components/Button';
+import { FieldModel } from 'app/models/FieldModel';
 
-export const Field = (): JSX.Element => {
+interface FieldProps {
+  items: FieldModel[];
+  click?: any;
+}
+
+export const Field = ({ items, click }: FieldProps): JSX.Element => {
   return (
     <>
       <div className={style.wapperField}>
@@ -12,18 +18,9 @@ export const Field = (): JSX.Element => {
           <Button click={() => {}} stylePros={style.borderButton} styleText={style.textButton} text={'New chatbot +'} />
           <img src={Frame} className={style.logo} />
           <div className={style.flexContainer}>
-            <CardField
-              title="CHATGPT"
-              content="Interact with our flagship language models in a conversational interface"
-            />
-            <CardField
-              title="CHATGPT"
-              content="Interact with our flagship language models in a conversational interface"
-            />
-            <CardField
-              title="CHATGPT"
-              content="Interact with our flagship language models in a conversational interface"
-            />
+            {items.map((item: FieldModel) => {
+              return <CardField click={click} title={item.name} content={item.description} />;
+            })}
           </div>
         </div>
       </div>

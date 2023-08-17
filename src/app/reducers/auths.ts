@@ -12,7 +12,6 @@ const initialState: RootState.AuthState = {
 export const authReducer = handleActions<RootState.AuthState, AuthModel>(
   {
     [AuthActions.Type.AUTH_LOGIN]: (state, action) => {
-      console.log('vao ne')
       if (action.payload && action.payload.name) {
         return [
           {
