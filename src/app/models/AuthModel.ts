@@ -1,11 +1,11 @@
 export interface AuthModel {
-    id?: String,
-    name?: String;
-    email?: String;
-    password?: String;
+    id?: string,
+    name?: string;
+    email?: string;
+    password?: string;
 }
 
 export interface AuthLogin {
-    email: String;
-    password: String;
+    email: string;
+    password: string;
 }

@@ -28,21 +28,6 @@ export const Body = () => {
 
     if (validateEmail == true && checkPassword == false) {
       login({email: formValues.email, password: formValues.password});
-
-      // axios
-      //   .post(url, {
-      //     email: formValues.email,
-      //     password: formValues.password
-      //   })
-      //   .then((response: any) => {
-      //     setData(response.data.user);
-      //     navigate('/chatgpt1');
-      //   })
-      //   .catch((error) => {
-      //     setCheckEmail(error.response.data.message);
-      //   });
-      // setCheckPassword(true);
-      // setValidateEmail(false);
     }
   };
 

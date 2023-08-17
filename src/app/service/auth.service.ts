@@ -8,21 +8,3 @@ export const authLogin = async ({email, password} : AuthLogin) => {
   });
 };
 
-// export const test = async(email: string, password: string) => {
-//     return await axios
-//     .post(url, {
-//       email: formValues.email,
-//       password: formValues.password
-//     })
-//     .then((response: any) => {
-//       setData(response.data.user);
-//       if(response) {
-//         navigate('/chatgpt1');
-//       }
-//     })
-//     .catch((error) => {
-//       setCheckEmail(error.response.data.message);
-//     });
-// }
-
-// }
