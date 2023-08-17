@@ -1,9 +1,11 @@
 import { TodoModel } from 'app/models';
+import { FieldModel } from 'app/models/FieldModel';
 
 export interface RootState {
   todos: RootState.TodoState;
   auths: RootState.AuthState;
   singup: RootState.SingupState
+  fields: RootState.FieldState;
   router?: any;
 }
 
@@ -18,7 +20,9 @@ export namespace RootState {
     email: string;
     password: string;
   };
-  
+
+  export type AuthState =  {};
+  export type FieldState =  FieldModel[];
 }
 
 
