@@ -42,7 +42,7 @@ export const Body = () => {
 
     if (!formValues.password) {
       setCheckPassword(true);
-      errors.password = 'password is required';
+      errors.password = 'Password is required';
     } else {
       setCheckPassword(false);
     }

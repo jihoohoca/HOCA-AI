@@ -21,7 +21,6 @@ export namespace RootState {
     password: string;
   };
 
-  export type AuthState =  {};
   export type FieldState =  FieldModel[];
 }
 

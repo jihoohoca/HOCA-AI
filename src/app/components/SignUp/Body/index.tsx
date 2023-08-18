@@ -4,6 +4,7 @@ import google from '../../../images/google.png';
 import microsoft from '../../../images/microsoft.png';
 import apple from '../../../images/apple.png';
 import check from '../../../images/check right.png';
+import eyes from '../../../images/eye.png'
 import { Link} from 'react-router-dom';
 import {useSignup} from './hooks'
 
@@ -42,7 +43,7 @@ export const Body = () => {
   const validate = (values: any) => {
     const errors = { email: '', password: '' };
     let regex = new RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
-    let regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+    let regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
 
     if (regex.test(values.email)) {
       setValidateEmail(true);
@@ -79,7 +80,7 @@ export const Body = () => {
         <p className={style.validation_email}>{formErrors.email}</p>
         <div>
           <input
-            onClick={handleShow}
+    
             className={style.password}
             type={show ? 'text' : 'password'}
             name="password"
@@ -87,6 +88,7 @@ export const Body = () => {
             value={formValues.password}
             onChange={handleChange}
           />
+        <span className={style.image_eye} onClick={handleShow}><img src={eyes}></img></span>
         </div>
         <p className={style.validation_email}>{formErrors.password}</p>
 
@@ -96,7 +98,7 @@ export const Body = () => {
               <div className={style.line_1}>Your password must contain:</div>
 
               <div>
-                <li className={style.line_2}> At least 1 upper case</li>
+                <li className={style.line_2}> At least 1 upper case and special characters</li>
               </div>
             </div>
             <div className={style.line_3}>

@@ -12,7 +12,6 @@ const useSignup = () => {
 
     const signup = async (signupUser: SignUp) => {
         let result = await signupService(signupUser)
-    
         if (result) {
           navigate('/chatgpt1');
           signupAction.authLogin({email: signupUser.email, password: signupUser.password});

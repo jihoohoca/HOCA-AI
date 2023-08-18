@@ -11,7 +11,6 @@ import { ChatBase as ChatBaseApp } from './containers/App/chatbase';
 import { ChatBase4 as ChatBaseApp4 } from './containers/App/chatbase4';
 import { SelectField } from './containers/App/select_field';
 
-
 // prepare store
 const store = configureStore();
 export interface Props {}
@@ -19,7 +18,7 @@ const App: FC<Props> = () => (
   <Provider store={store}>
     <Router>
       <Routes>
-        <Route path="/login" element={<AppLogin />} />
+        <Route path="/login" element={<AppLogin/>} />
         <Route path="/chatgpt1" element={<ChatGPT1App />} />
         <Route path="/chatgpt2" element={<ChatGPT2App />} />
         <Route path="/field" element={<SelectField />} />

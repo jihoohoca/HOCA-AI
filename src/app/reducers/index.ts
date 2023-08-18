@@ -10,6 +10,6 @@ export { RootState };
 export const rootReducer = combineReducers<RootState>({
   todos: todoReducer,
   auths: authReducer,
-  singup: signupReducer
+  singup: signupReducer,
   fields: fieldReducer,
 });

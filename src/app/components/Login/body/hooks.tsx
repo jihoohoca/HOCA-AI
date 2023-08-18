@@ -11,11 +11,12 @@ const useAuth = () => {
 
 
   const login = async (user: AuthLogin) => {
+  
     let result = await authLogin(user);
 
     if (result) {
       navigate('/field');
-      authActions.authLogin({email: user.email, password: user.password, name: result.data.user.name});
+      authActions.authLogin({email: user.email, password: user.password});
       localStorage.setItem('accessToken', JSON.stringify(result.data.tokens.access));
       localStorage.setItem('refreshToken', JSON.stringify(result.data.tokens.refresh));
     }

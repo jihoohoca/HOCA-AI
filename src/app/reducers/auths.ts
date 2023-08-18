@@ -11,7 +11,6 @@ const initialState: RootState.AuthState = {
 export const authReducer = handleActions<RootState.AuthState, AuthLogin>(
   {
     [AuthActions.Type.AUTH_LOGIN]: (state, action) => {
-
       if (action.payload) {
         state.email = action.payload.email || '';
         state.password = action.payload.password || '';
